@@ -48,17 +48,15 @@ networks:
     driver: bridge
 volumes:
   wp-data:
-    driver: local # ici nous stockons le volume en local
+    driver: local
     driver_opts:
-      type: 'none' 									# aucun type spécifique
+      type: 'none'
       o: 'bind'
       device: '/Users/ahallali/data/wordpress'
 
-  # - /Users/ahallali/data/wordpress
   mariadb-data:
-    driver: local # ici nous stockons le volume en local
+    driver: local
     driver_opts:
-      type: 'none' 									# aucun type spécifique
+      type: 'none'
       o: 'bind'
       device: '/Users/ahallali/data/mariadb'
-  # - /Users/ahallali/data/mariadb
