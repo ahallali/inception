@@ -44,5 +44,17 @@ networks:
     name: inception
     driver: bridge
 volumes:
-  wp-data: 
+  wp-data:
   mariadb-data:
+  wordpress:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /Users/ahallali/data/wordpress
+  mariadb:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /Users/ahallali/data/mariadb
