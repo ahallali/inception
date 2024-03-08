@@ -12,6 +12,7 @@ services:
     - "443:443"
     networks:
     - inception
+    restart: always
   
   mariadb:
     build: ./requirements/mariadb
@@ -25,6 +26,7 @@ services:
     container_name: mariadb
     volumes:
       - "mariadb-data:/var/lib/mysql"
+    restart: always
 
 
   wordpress:
@@ -41,6 +43,7 @@ services:
     env_file:
       - .env
     container_name: wordpress
+    restart: always
 
 networks:
   inception:
